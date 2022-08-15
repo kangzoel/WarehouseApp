@@ -1,0 +1,77 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
+    <PackageIcon>icon.png</PackageIcon>
+    <ApplicationIcon>Assets\icon.ico</ApplicationIcon>
+    <SignAssembly>False</SignAssembly>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="AssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\boxes.png" />
+    <None Remove="Assets\box_check.png" />
+    <None Remove="Assets\box_delivery.png" />
+    <None Remove="Assets\checklist.png" />
+    <None Remove="Assets\filter.png" />
+    <None Remove="Assets\pdf.png" />
+    <None Remove="Assets\plus.png" />
+    <None Remove="Assets\plus_box.png" />
+    <None Remove="Assets\send.png" />
+    <None Remove="Assets\send.svg" />
+    <None Remove="Assets\send_box.png" />
+    <None Remove="Assets\setting.png" />
+    <None Remove="Assets\users.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="itext7" Version="7.2.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="NetBarcode" Version="1.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\boxes.png" />
+    <Resource Include="Assets\box_check.png" />
+    <Resource Include="Assets\box_delivery.png" />
+    <Resource Include="Assets\checklist.png" />
+    <Resource Include="Assets\filter.png" />
+    <Resource Include="Assets\pdf.png" />
+    <Resource Include="Assets\plus.png" />
+    <Resource Include="Assets\plus_box.png" />
+    <Resource Include="Assets\send.png" />
+    <Resource Include="Assets\send.svg" />
+    <Resource Include="Assets\send_box.png" />
+    <Resource Include="Assets\setting.png" />
+    <Resource Include="Assets\users.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <SplashScreen Include="SplashScreen.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Assets\icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

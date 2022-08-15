@@ -1,0 +1,9 @@
+boxes.png			https://www.reshot.com/free-svg-icons/item/stack-of-boxes-XKTDJUP4FE/
+plus.png			https://uxwing.com/addition-color-icon/
+box_check.png		https://www.reshot.com/free-svg-icons/item/delivery-protection-KS4ZR2N9Y7/
+box_delivery.png	https://www.reshot.com/free-svg-icons/item/car-delivery-7MWUNBQJCV/
+checklist.png		https://www.reshot.com/free-svg-icons/item/clipboard-checklist-2C7KJ8FZPN/
+users.png			https://www.reshot.com/free-svg-icons/item/users-8XMLVGN9WY/
+setting.png			https://www.reshot.com/free-svg-icons/item/settings-RQMZTY9CK2/
+pdf.png				https://uxwing.com/pdf-icon/
+filter.png			https://fontawesome.com/icons/filter?s=solid

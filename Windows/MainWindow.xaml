@@ -1,0 +1,108 @@
+﻿<Window x:Class="WarehouseApp.Windows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WarehouseApp"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Aplikasi Gudang"
+        Height="600"
+        MinHeight="600"
+        Width="1200"
+        MinWidth="1200"
+        Closed="Window_Closed"
+        Loaded="Window_Loaded">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <ListBox Name="Menu_LB"
+                 BorderThickness="0"
+                 Width="200"
+                 SelectionMode="Single"
+                 Cursor="Hand"
+                 SelectedIndex="0"
+                 SelectionChanged="Menu_LB_SelectionChanged">
+            <ListBoxItem Padding="20 10">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="..\Assets\boxes.png"
+                           Width="42"
+                           Margin="0 0 10 0" />
+                    <TextBlock VerticalAlignment="Center">
+                        Daftar Barang
+                    </TextBlock>
+                </StackPanel>
+            </ListBoxItem>
+
+            <ListBoxItem Padding="20 10">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="..\Assets\checklist.png"
+                           Width="42"
+                           Margin="0 0 10 0" />
+                    <TextBlock HorizontalAlignment="Center"
+                               VerticalAlignment="Center">
+                        Stok Barang
+                    </TextBlock>
+                </StackPanel>
+            </ListBoxItem>
+
+            <ListBoxItem Padding="20 10">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="..\Assets\box_check.png"
+                           Width="42"
+                           Margin="0 0 10 0" />
+                    <TextBlock HorizontalAlignment="Center"
+                               VerticalAlignment="Center">
+                        Barang Masuk
+                    </TextBlock>
+                </StackPanel>
+            </ListBoxItem>
+
+            <ListBoxItem Padding="20 10">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="..\Assets\box_delivery.png"
+                           Width="42"
+                           Margin="0 0 10 0" />
+                    <TextBlock HorizontalAlignment="Center"
+                               VerticalAlignment="Center">
+                        Barang Keluar
+                    </TextBlock>
+                </StackPanel>
+            </ListBoxItem>
+
+            <ListBoxItem Padding="20 10"
+                         x:Name="UsersLBI">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="..\Assets\users.png"
+                           Width="32"
+                           Margin="0 0 20 0" />
+                    <TextBlock HorizontalAlignment="Center"
+                               VerticalAlignment="Center">
+                        Pengguna
+                    </TextBlock>
+                </StackPanel>
+            </ListBoxItem>
+
+            <ListBoxItem Padding="20 10">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="..\Assets\setting.png"
+                           Width="32"
+                           Margin="0 0 20 0" />
+                    <TextBlock HorizontalAlignment="Center"
+                               VerticalAlignment="Center">
+                        Pengaturan Akun
+                    </TextBlock>
+                </StackPanel>
+            </ListBoxItem>
+        </ListBox>
+
+        <Frame Name="TheFrame"
+               Source="/Pages/ItemsPage.xaml"
+               Grid.Column="1"
+               NavigationUIVisibility="Hidden" />
+    </Grid>
+</Window>

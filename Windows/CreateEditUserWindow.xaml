@@ -1,0 +1,55 @@
+﻿<Window x:Class="WarehouseApp.Windows.CreateEditUserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WarehouseApp.Windows"
+        mc:Ignorable="d"
+        Height="430"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize"
+        Width="300"
+        Loaded="Window_Loaded">
+    
+    <StackPanel Margin="20 10">
+        <StackPanel Style="{StaticResource Field}">
+            <Label Content="Nama" />
+            <TextBox x:Name="NameTB" />
+        </StackPanel>
+
+        <StackPanel Style="{StaticResource Field}">
+            <Label Content="Username" />
+            <TextBox x:Name="Username" />
+        </StackPanel>
+
+        <StackPanel Style="{StaticResource Field}">
+            <Label Content="Role" />
+            <ComboBox Name="Role"
+                      SelectedIndex="0"
+                      SelectedValuePath="Content">
+                <ComboBoxItem Content="User" />
+                <ComboBoxItem Content="Admin" />
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel Style="{StaticResource Field}">
+            <Label Content="Password" />
+            <PasswordBox Name="Password" />
+        </StackPanel>
+
+        <StackPanel Style="{StaticResource Field}">
+            <Label Content="Konfirmasi Password" />
+            <PasswordBox Name="PasswordConfirm" />
+            <Label Content="Ketik ulang password" 
+                   FontSize="11"
+                   Foreground="Gray"
+                   Margin="0 4 0 12"/>
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Right">
+            <Button Name="SaveButton" 
+                    Content="Simpan"
+                    Click="SaveButton_Click"/>
+        </StackPanel>
+    </StackPanel>
+</Window>

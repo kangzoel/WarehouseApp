@@ -1,0 +1,36 @@
+﻿<Window x:Class="WarehouseApp.Windows.CreateEditItemWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WarehouseApp.Windows"
+        mc:Ignorable="d"
+        Height="300"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize"
+        Width="300"
+        Loaded="Window_Loaded">
+
+    <StackPanel Style="{StaticResource ContainerStackPanel}">
+        <StackPanel Style="{StaticResource Field}">
+            <Label Content="Barcode"/>
+            <TextBox Name="BarcodeTB"/>
+        </StackPanel>
+
+        <StackPanel Style="{StaticResource Field}">
+            <Label Content="Nama"/>
+            <TextBox Name="NameTB"/>
+        </StackPanel>
+
+        <StackPanel Style="{StaticResource Field}">
+            <Label Content="Satuan"/>
+            <TextBox Name="QuantifierTB"/>
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Right">
+            <Button Name="SaveButton"
+                    Content="Simpan"
+                    Click="SaveButton_Click"/>
+        </StackPanel>
+    </StackPanel>
+</Window>

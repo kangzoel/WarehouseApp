@@ -1,0 +1,74 @@
+﻿<Window x:Class="WarehouseApp.Windows.CreateStockInputLogWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WarehouseApp.Windows"
+        mc:Ignorable="d"
+        Title="Barang Masuk"
+        Height="450"
+        Width="400"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner">
+
+    <StackPanel Style="{StaticResource ContainerStackPanel}">
+        <!-- barcode -->
+        <StackPanel Style="{StaticResource Field}">
+            <Label Content="Kode Barang" />
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="Barcode"
+                         Width="200"
+                         IsEnabled="False"
+                         Text="Terisi otomatis" />
+                <Button Name="ChooseItem"
+                        Content="Pilih Barang" 
+                        Margin="10 0 0 0" 
+                        Click="ChooseItem_Click"/>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- item name -->
+        <StackPanel Style="{StaticResource Field}">
+            <Label Content="Nama Barang" />
+            <TextBox Name="ItemName"
+                     IsEnabled="False"
+                     Text="Terisi otomatis" />
+        </StackPanel>
+
+        <!-- expiration date -->
+        <StackPanel Style="{StaticResource Field}">
+            <Label Content="Tanggal Kedaluwarsa" />
+            <DatePicker Name="ExpirationDate"
+                        Margin="0 0 0 6"/>
+            <StackPanel Orientation="Horizontal">
+                <CheckBox Name="Expirable"
+                          Margin="0 0 10 0"
+                          Checked="Expirable_Changed"
+                          Unchecked="Expirable_Changed">
+                    <TextBlock>Tidak kedaluwarsa</TextBlock>
+                </CheckBox>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- amount -->
+        <StackPanel Style="{StaticResource Field}">
+            <Label Content="Jumlah" />
+            <TextBox Name="Amount" />
+        </StackPanel>
+        
+        <!-- quantifier -->
+        <StackPanel Style="{StaticResource Field}">
+            <Label Content="Satuan" />
+            <TextBox Name="Quantifier"
+                     IsEnabled="False"
+                     Text="Terisi otomatis" />
+        </StackPanel>
+
+        <StackPanel>
+            <Button Name="SaveButton"
+                    Content="Simpan" 
+                    HorizontalAlignment="Right" 
+                    Click="SaveButton_Click" />
+        </StackPanel>
+    </StackPanel>
+</Window>
